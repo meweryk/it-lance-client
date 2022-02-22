@@ -1,0 +1,126 @@
+.block-21 {
+  padding: var(--header-height) var(--popup-scroll-offset) 0 0;
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  &:before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    content: '';
+    position: absolute;
+    background: #F1F1F1;
+  }
+
+  .pg-canvas {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 0px);
+    z-index: 1;
+    opacity: 0.08;
+    position: absolute;
+  }
+
+  &__shadows {
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+  }
+
+  @keyframes AAAAA {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, 20vh);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes BBBBB {
+    0% {
+      opacity: 0;
+      transform: translate(50%, 20vh);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  &__columns {
+    display: flex;
+    flex-grow: 1;
+
+    &>div {
+      flex: 50% 0 0;
+
+      &:nth-child(1) {
+        position: relative;
+        animation: 0.3s AAAAA ease-in;
+
+        img {
+          left: 40%;
+          bottom: 0;
+          height: 115%;
+          position: absolute;
+          transform: translateX(-50%);
+
+          @media (max-width: 750px) {
+            height: 100%;
+          }
+
+          @media (max-width: 650px) {
+            transform: translateX(-60%);
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        padding-bottom: 10vh;
+        animation: 0.3s BBBBB ease-in;
+
+        h3 {
+          color: #364C76;
+          font-size: 1.7em;
+          margin-top: 0;
+          text-transform: uppercase;
+
+          @media (max-width: 550px) {
+            text-align: center;
+          }
+        }
+
+        p {
+          margin: 1.5em 0;
+        }
+      }
+    }
+
+    @media (max-width: 550px) {
+      flex-direction: column;
+    }
+  }
+
+  .content-block__wrapper {
+    z-index: 3;
+    position: relative;
+    flex-grow: 1;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+  }
+}

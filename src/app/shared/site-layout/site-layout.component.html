@@ -1,0 +1,56 @@
+<!-- header -->
+<header id="app_header" class="app-header">
+    <div class="app-header__wrapper"><a href="https://www.it-lance.com.ua/ru/" class="app-header__logo" rel="home"><img
+                src="../assets/media/logo.png" alt="IT-LANCE"></a>
+        <div class="app-header__grow"></div>
+        <ul class="app-header__navigation">
+            <li routerLinkActive="active" *ngFor="let link of links" (mouseenter)="onMouseEnter($event)"
+                (mouseleave)="onMouseLeave($event)"><a [href]="[link.url]" class="center-tablet">{{link.name}}</a>
+                <ul id="submenu1" class="app-header__navigation__submenu" *ngIf="link.name === 'НАШИ УСЛУГИ'">
+                    <div class="app-header__navigation__submenu__triangle">
+                        <div></div>
+                    </div>
+                    <li routerLinkActive="active" *ngFor="let link1 of links1">
+                        <a [href]="[link1.url]">{{link1.name}}</a>
+                    </li>
+                </ul>
+
+                <ul id="submenu2" class="app-header__navigation__submenu" *ngIf="link.name === 'О НАС'">
+                    <div class="app-header__navigation__submenu__triangle">
+                        <div></div>
+                    </div>
+                    <li routerLinkActive="active" *ngFor="let link2 of links2">
+                        <a [routerLink]="[link2.url]">{{link2.name}}</a>
+                    </li>
+                </ul>
+
+            </li>
+
+        </ul><a href="#" class="btn btn__light" data-popup="ContactFormPopup">Отправить заявку</a>
+        <ul class="app-header__lang">
+            <div class="app-header__lang__current">РУС</div>
+            <div class="app-header__lang__list"><a href="https://www.it-lance.com.ua/ua/outsourcing.html">УКР</a><a
+                    href="https://www.it-lance.com.ua/en/outsourcing.html">ENG</a></div>
+        </ul>
+        <div class="app-header__mobile-menu-toggle" (click)="onMobileMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="app-header__mobile-menu">
+        <div class="app-header__wrapper"><a href="https://www.it-lance.com.ua/ru/" class="app-header__logo"
+                rel="home"><img src="../assets/media/landing/logo.png" alt="IT-LANCE"></a></div>
+        <ul class="app-header__navigation">
+            <li routerLinkActive="active" *ngFor="let link of links">
+                <a [href]="[link.url]" class="center-tablet">{{link.name}}</a>
+            </li>
+        </ul>
+        <div style="text-align: center;"><a href="#" class="btn btn__white" data-popup="ContactFormPopup">Отправить
+                заявку</a></div>
+    </div>
+</header>
+
+<main>
+    <router-outlet></router-outlet>
+</main>
