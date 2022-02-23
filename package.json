@@ -10,10 +10,10 @@
     "start": "node server",
     "ng": "ng",
     "start-ng": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm install && npm run build --prod"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm install && npm run build"
   },
   "private": true,
   "dependencies": {
