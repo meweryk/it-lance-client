@@ -792,8 +792,7 @@
 
 <div class="content-block block-7">
     <div class="content-block__wrapper">
-        <swiper [pagination]="{
-      clickable: true }" class="swiper-container">
+        <swiper  [slidesPerView]="1" [centeredSlides]="true" [slidesPerGroupSkip]="1" [grabCursor]="true" [breakpoints]="{'769': {slidesPerView: 3, slidesPerGroup: 3}}" [pagination]="{ clickable: true }" class="swiper-container">
             <ng-template swiperSlide class="swiper-slide block-7__grid__item">
                 <div class="block-7__grid__item__wrapper">
                     <div>
