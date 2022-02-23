@@ -1,12 +1,13 @@
 {
   "name": "it-lance-client",
   "version": "0.0.0",
+  "main": "server.js",
   "engines": {
     "node": "16.13.0",
     "npm": "8.1.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server",
     "ng": "ng",
     "start-ng": "ng serve",
     "build": "ng build",
