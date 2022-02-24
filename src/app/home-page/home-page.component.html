@@ -130,71 +130,7 @@
 <div id="block-1-particles" class="content-block block-1">
    <!-- <canvas class="pg-canvas" style="display: block;" width="625" height="1042"></canvas>-->
     <div class="content-block__wrapper">
-        <swiper [navigation]="true" [slidesPerView]="1" [breakpoints]="{
-
-      '640': {
-
-        slidesPerView: 2,
-
-        spaceBetween: 20
-
-      },
-
-      '768': {
-
-        slidesPerView: 4,
-
-        spaceBetween: 40
-
-      },
-
-      '1024': {
-
-        slidesPerView: 5,
-
-        spaceBetween: 50
-
-      }
-
-    }"
-
-    
-
-    [breakpoints]="{
-
-    '@0.00': {
-
-    slidesPerView: 1,
-
-    spaceBetween: 10
-
-    },
-
-    '@0.75': {
-
-    slidesPerView: 2,
-
-    spaceBetween: 20
-
-    },
-
-    '@1.00': {
-
-    slidesPerView: 3,
-
-    spaceBetween: 40
-
-    },
-
-    '@1.50': {
-
-    slidesPerView: 4,
-
-    spaceBetween: 50
-
-    }
-
-    }" class="swiper-container">
+        <swiper [navigation]="true" [slidesPerView]="1" class="swiper-container">
             <ng-template swiperSlide class="swiper-slide block-1__slide-1">
                 <div><img src="../assets/media/landing/block-1-slide-1.png">
                     <div class="block-1__slide-title">Профессиональный<br>IТ-аутсорсинг <span class="geo-city">в
@@ -858,72 +794,18 @@
 
 <div class="content-block block-7">
     <div class="content-block__wrapper">
-        <swiper  [slidesPerView]="1" [spaceBetween]="10" [navigation]="true"
-[breakpoints]="{
-
-      '640': {
-
-        slidesPerView: 2,
-
-        spaceBetween: 20
-
-      },
-
-      '768': {
-
-        slidesPerView: 4,
-
-        spaceBetween: 40
-
-      },
-
-      '1024': {
-
-        slidesPerView: 5,
-
-        spaceBetween: 50
-
-      }
-
-    }"
-
-    
-
-    [breakpoints]="{
-
-    '@0.00': {
-
-    slidesPerView: 1,
-
-    spaceBetween: 10
-
-    },
-
-    '@0.75': {
-
-    slidesPerView: 2,
-
-    spaceBetween: 20
-
-    },
-
-    '@1.00': {
-
-    slidesPerView: 3,
-
-    spaceBetween: 40
-
-    },
-
-    '@1.50': {
-
-    slidesPerView: 4,
-
-    spaceBetween: 50
-
-    }
-
-    }" [pagination]="{ clickable: true }" class="swiper-container">
+        <swiper [slidesPerView]="1"
+                [breakpoints]="{
+                  '640': {slidesPerView: 2},
+                  '768': {slidesPerView: 4},
+                  '1024': {slidesPerView: 5}
+                }"
+                [breakpoints]="{
+                  '@0.00': {slidesPerView: 1},
+                  '@0.75': {slidesPerView: 2},
+                  '@1.00': {slidesPerView: 3},
+                  '@1.50': {slidesPerView: 4}
+                }" [pagination]="{ clickable: true }" class="swiper-container">
             <ng-template swiperSlide class="swiper-slide block-7__grid__item">
                 <div class="block-7__grid__item__wrapper">
                     <div>
